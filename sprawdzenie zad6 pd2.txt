@@ -1,0 +1,43 @@
+Dla sprawdzenia programu wykonam zadania numer 6 z ostatniej czêœci laboratoryjnej.
+Uruchomiwszy program w C dostaje wygenerowany kod, który wpisuje do solwera i wychodzi mi to:
+
+Maximize
+sum :- x4- x5
+Subject to 
+q0 : + 8 x0 + 3 x1 -5 x2 + 1 x3 + 1 x4 = 4 
+q1 : + 3 x0 + 1 x1 -2 x2  -1 x3 + 1 x5 = 1 
+Bounds 
+0 <= x0 
+0 <= x1 
+0 <= x2 
+0 <= x3 
+0 <= x4 
+0 <= x5 
+Generals 
+x0 
+x1 
+x2 
+x3 
+x4 
+x5 
+End
+Reading problem data
+2 rows, 6 columns, 10 non-zeros
+6 integer variables, none of which are binary
+21 lines were read
+Scaling...
+ A: min|aij| = 1  max|aij| = 8  ratio = 8
+Problem data seem to be well scaled
+GLPK Simplex Optimizer, v4.49
+2 rows, 6 columns, 10 non-zeros
+Preprocessing...
+2 rows, 4 columns, 8 non-zeros
+Scaling...
+ A: min|aij| = 1  max|aij| = 8  ratio = 8
+Problem data seem to be well scaled
+Constructing initial basis...
+Size of triangular part = 2
+*0: obj = -5  infeas = 0 (0)
+*2: obj = 0  infeas = 0 (0)
+OPTIMAL SOLUTION FOUND
+{"x4":0,"x5":0,"x0":0.45454545454545453,"x1":0,"x2":0,"x3":0.36363636363636365}

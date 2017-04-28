@@ -1,0 +1,51 @@
+#include <stdio.h>
+int main()
+{
+  /* Na samym pocz¹tku zadajê ile jest równañ ograniczaj¹cych zbiór punktów*/
+  int i,j,x,y,z;
+  scanf("%d %d",&i, &j);
+  int a[i][j+i],b[i];
+  z=0;
+  for(x=0;x<i;x++)
+    {
+    for(y=0;y<j;y++)
+      {
+	scanf("%d",&a[x][y]);
+      }
+    }
+  for(x=0;x<i;x++)
+    scanf("%d",&b[x]);
+  for(x=0;x<i;x++)
+    {
+      for(y=j;y<j+i;y++)
+	{
+	  a[x][y]=0;
+	}
+      a[x][j+z]=1;
+      z++;
+     }
+  printf("Maximize\n sum :");
+    for(y=j;y<j+i;y++)
+      printf("- x%d",y);
+    printf("\nSubject to \n");
+  for(x=0;x<i;x++) 
+    {
+      printf("q%d :",x);
+      for(y=0;y<j+i;y++)
+	{
+	  if(a[x][y]!=0)
+	    if(a[x][y]>0)
+	      printf("+ ");
+	  printf(" %d x%d",a[x][y],y);
+	}
+	  printf(" = %d \n",b[x]);
+    }
+  printf("Bounds \n");
+   for(y=0;y<j+i;y++)
+    printf("0 <= x%d \n",y);
+   printf("Generals \n");
+   for(y=0;y<j+i;y++)
+     printf("x%d \n",y);
+   printf("End\n");
+  
+}
